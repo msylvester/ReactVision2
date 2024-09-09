@@ -1,0 +1,267 @@
+[Unknown]
+Black
+Blue
+Green
+Dark Turquoise
+Red
+Dark Pink
+Brown
+Light Gray
+Dark Gray
+Light Blue
+Bright Green
+Light Turquoise
+Salmon
+Pink
+Yellow
+White
+Light Green
+Light Yellow
+Tan
+Light Violet
+Glow In Dark Opaque
+Purple
+Dark Blue-Violet
+Orange
+Magenta
+Lime
+Dark Tan
+Bright Pink
+Medium Lavender
+Lavender
+Trans-Black IR Lens
+Trans-Dark Blue
+Trans-Green
+Trans-Bright Green
+Trans-Red
+Trans-Brown
+Trans-Light Blue
+Trans-Neon Green
+Trans-Very Lt Blue
+Trans-Dark Pink
+Trans-Yellow
+Trans-Clear
+Trans-Purple
+Trans-Neon Yellow
+Trans-Neon Orange
+Chrome Antique Brass
+Chrome Blue
+Chrome Green
+Chrome Pink
+Chrome Black
+Very Light Orange
+Light Purple
+Reddish Brown
+Light Bluish Gray
+Dark Bluish Gray
+Medium Blue
+Medium Green
+Speckle Black-Copper
+Speckle DBGray-Silver
+Light Pink
+Light Nougat
+Milky White
+Metallic Silver
+Metallic Green
+Metallic Gold
+Medium Nougat
+Dark Purple
+Light Brown
+Royal Blue
+Nougat
+Light Salmon
+Violet
+Medium Bluish Violet
+Glitter Trans-Dark Pink
+Medium Lime
+Glitter Trans-Clear
+Aqua
+Light Lime
+Light Orange
+Glitter Trans-Purple
+Speckle Black-Silver
+Speckle Black-Gold
+Copper
+Pearl Light Gray
+Pearl Sand Blue
+Pearl Light Gold
+Trans-Medium Blue
+Pearl Dark Gray
+Pearl Very Light Gray
+Very Light Bluish Gray
+Yellowish Green
+Flat Dark Gold
+Flat Silver
+Trans-Orange
+Pearl White
+Bright Light Orange
+Bright Light Blue
+Rust
+Bright Light Yellow
+Trans-Pink
+Sky Blue
+Trans-Light Purple
+Dark Blue
+Dark Green
+Glow In Dark Trans
+Pearl Gold
+Dark Brown
+Maersk Blue
+Dark Red
+Dark Azure
+Medium Azure
+Light Aqua
+Olive Green
+Chrome Gold
+Sand Red
+Medium Dark Pink
+Earth Orange
+Sand Purple
+Sand Green
+Sand Blue
+Chrome Silver
+Fabuland Brown
+Medium Orange
+Dark Orange
+Very Light Gray
+Glow in Dark White
+Medium Violet
+Glitter Trans-Neon Green
+Glitter Trans-Light Blue
+Trans-Flame Yellowish Orange
+Trans-Fire Yellow
+Trans-Light Royal Blue
+Reddish Lilac
+Vintage Blue
+Vintage Green
+Vintage Red
+Vintage Yellow
+Fabuland Orange
+Modulex White
+Modulex Light Bluish Gray
+Modulex Light Gray
+Modulex Charcoal Gray
+Modulex Tile Gray
+Modulex Black
+Modulex Tile Brown
+Modulex Terracotta
+Modulex Brown
+Modulex Buff
+Modulex Red
+Modulex Pink Red
+Modulex Orange
+Modulex Light Orange
+Modulex Light Yellow
+Modulex Ochre Yellow
+Modulex Lemon
+Modulex Pastel Green
+Modulex Olive Green
+Modulex Aqua Green
+Modulex Teal Blue
+Modulex Tile Blue
+Modulex Medium Blue
+Modulex Pastel Blue
+Modulex Violet
+Modulex Pink
+Modulex Clear
+Modulex Foil Dark Gray
+Modulex Foil Light Gray
+Modulex Foil Dark Green
+Modulex Foil Light Green
+Modulex Foil Dark Blue
+Modulex Foil Light Blue
+Modulex Foil Violet
+Modulex Foil Red
+Modulex Foil Yellow
+Modulex Foil Orange
+Coral
+Pastel Blue
+Glitter Trans-Orange
+Opal Trans-Light Blue
+Opal Trans-Dark Pink
+Opal Trans-Clear
+Opal Trans-Brown
+Trans-Light Bright Green
+Trans-Light Green
+Opal Trans-Purple
+Opal Trans-Bright Green
+Opal Trans-Dark Blue
+Vibrant Yellow
+Pearl Copper
+Fabuland Red
+Reddish Gold
+Curry
+Dark Nougat
+Bright Reddish Orange
+Pearl Red
+Pearl Blue
+Pearl Green
+Pearl Brown
+Pearl Black
+Duplo Blue
+Duplo Medium Blue
+Duplo Lime
+Fabuland Lime
+Duplo Medium Green
+Duplo Light Green
+Light Tan
+Rust Orange
+Clikits Pink
+Two-tone Copper
+Two-tone Gold
+Two-tone Silver
+Pearl Lime
+Duplo Pink
+Medium Brown
+Warm Tan
+Duplo Turquoise
+Warm Yellowish Orange
+Metallic Copper
+Light Lilac
+Trans-Medium Purple
+Trans-Black
+Glitter Trans-Bright Green
+Glitter Trans-Medium Purple
+Glitter Trans-Green
+Glitter Trans-Pink
+Clikits Yellow
+Duplo Dark Purple
+Trans-Neon Red
+Pearl Titanium
+HO Aqua
+HO Azure
+HO Blue-gray
+HO Cyan
+HO Dark Aqua
+HO Dark Blue
+HO Dark Gray
+HO Dark Green
+HO Dark Lime
+HO Dark Red
+HO Dark Sand Green
+HO Dark Turquoise
+HO Earth Orange
+HO Gold
+HO Light Aqua
+HO Light Brown
+HO Light Gold
+HO Light Tan
+HO Light Yellow
+HO Medium Blue
+HO Medium Red
+HO Metallic Blue
+HO Metallic Dark Gray
+HO Metallic Green
+HO Metallic Sand Blue
+HO Olive Green
+HO Rose
+HO Sand Blue
+HO Sand Green
+HO Tan
+HO Titanium
+Metal
+Reddish Orange
+Sienna Brown
+Umber Brown
+Opal Trans-Yellow
+[No Color/Any Color]
