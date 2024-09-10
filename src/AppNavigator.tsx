@@ -11,7 +11,7 @@ import CameraScreen from './Views/CameraScreen';
 // import LeggoScreen from './Views/SelectLeggo';
 import SetsScreen from './Views/SetsScreen';
 import LeggoScreen from './Views/SelectLeggo';
-
+import LeggoDetailView from './Views/LeggoDetailView';
 const Stack = createStackNavigator();
 
 const AppNavigator = (props: { initialRouteName: any; }) => {
@@ -48,6 +48,7 @@ const AppNavigator = (props: { initialRouteName: any; }) => {
             <Stack.Screen name="CameraScreen" component={CameraScreen} />
             <Stack.Screen name="LeggoScreen" component={LeggoScreen} />
             <Stack.Screen name="SetsScreen" component={SetsScreen} />
+            <Stack.Screen name="LeggoDetailView" component={LeggoDetailView} options={{ title: 'Part Details' }} />
         </Stack.Navigator>
     );
 };

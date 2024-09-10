@@ -43,6 +43,7 @@ const userSlice = createSlice({
       state.project.blocks = action.payload.blocks;
     },
     updateBlocks: (state, action) => {
+      console.log(`the payload is ${JSON.stringify(action.payload)}`)
       state.project.blocks.push(action.payload);
     },
     setCameraPermission: (state, action) => {
@@ -63,6 +64,7 @@ export const {
   updateBlocks,
   setProjectName,
   setProject,
+  removeProject, // Export the new action,
 } = userSlice.actions;
 
 export const selectUser = state => state.user.user;
