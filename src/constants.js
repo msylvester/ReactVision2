@@ -8,7 +8,7 @@ import black_2x2 from './img/black_2x2.png';
 import green_2x2 from './img/green_2x2.png';
 import grey_2x2 from './img/grey_2x2.png';
 import folder_img from './img/folder.png';
-import folder_img_two from './img/folder_copy_two.png';
+import folder_img_two from './img/folder.png';
 
 // Import project icon image
 const API_KEY = '31b9f8407f4148fb969d92283f45ecc7';
