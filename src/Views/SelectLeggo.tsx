@@ -1,50 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, TextInput, Pressable, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, Pressable, Alert, ActivityIndicator } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { useNavigation } from '@react-navigation/native';
 import { CATEGORIES, COLORS } from '../constants';
 import ColorPickerModal from '../Components/ColorPickerModal';
-import styles from '../styles/leggSelectStyles';
+import styles from '../styles/leggoSelectStyles';
 import { KEY } from '@env';
 
 const API_URL = 'https://rebrickable.com/api/v3/lego/parts/';
-
-interface Part {
-  part_num: string;
-  name: string;
-  part_cat: number;
-  part_url: string;
-  part_img_url: string | null;
-  external_ids: {
-    BrickLink: string[];
-    BrickOwl: string[];
-    Brickset?: string[];
-    LDraw: string[];
-    LEGO?: string[];
-  };
-  print_of: string | null;
-}
-
-interface ApiResponse {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: Part[];
-}
-
-const parseApiResponse = (data: ApiResponse): Part[] => {
-  return data.results.map(part => ({
-    part_num: part.part_num,
-    name: part.name,
-    part_cat: part.part_cat,
-    part_url: part.part_url,
-    part_img_url: part.part_img_url,
-    external_ids: part.external_ids,
-    print_of: part.print_of
-  }));
-};
-
-
 
 const SelectLeggo = () => {
     const navigation = useNavigation();
@@ -54,13 +17,13 @@ const SelectLeggo = () => {
     const [searchText, setSearchText] = useState<string>('');
     const [selectedCategory, setSelectedCategory] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
-    const [categoryId, setCategoryID] = useState<string | null>(null)
+    const [categoryId, setCategoryID] = useState<string | null>(null);
    
-    const selectCat = (cat) => {
+    const selectCat = (cat: string) => {
         setSelectedCategory(cat);
         setCategoryID(CATEGORIES[cat]);
-       
-    }
+    };
+
     const openColorPicker = () => {
         setColorModalVisible(true);
     };
@@ -75,20 +38,20 @@ const SelectLeggo = () => {
         setSelectedColorId(colorId || null);
         closeColorPicker();
     };
+
     const filteredCategories = Object.keys(CATEGORIES).filter((category: string) =>
         category.toLowerCase().includes(searchText.toLowerCase())
-      );
+    );
 
     const searchParts = async () => {
         setLoading(true);
         try {
-             const queryParams = new URLSearchParams({
+            const queryParams = new URLSearchParams({
                 page_size: '10',
                 search: searchText || '',
                 part_cat: categoryId || '',
                 color_id: selectedColorId || '',
             }).toString();
-            console.log(`here is the ping ${API_URL}?${queryParams}`);
 
             const response = await fetch(`${API_URL}?${queryParams}`, {
                 headers: {
@@ -100,9 +63,16 @@ const SelectLeggo = () => {
                 throw new Error('Error fetching parts');
             }
 
-            const data: ApiResponse = await response.json();
-            const parsedParts = parseApiResponse(data);
-            console.log(`here is the parsed parts ${JSON.stringify(parsedParts)}`);
+            const data = await response.json();
+            const parsedParts = data.results.map((part) => ({
+                part_num: part.part_num,
+                name: part.name,
+                part_cat: part.part_cat,
+                part_url: part.part_url,
+                part_img_url: part.part_img_url,
+                external_ids: part.external_ids,
+                print_of: part.print_of,
+            }));
 
             // Navigate to the DetailView and pass the fetched parts data
             navigation.navigate('LeggoDetailView', { parts: parsedParts });
@@ -117,15 +87,16 @@ const SelectLeggo = () => {
         <View style={styles.container}>
             <TextInput
                 style={styles.searchBar}
-                placeholder="Leggo Parts"
+                placeholder="Search Lego Parts"
                 value={searchText}
                 onChangeText={setSearchText}
+                autoCorrect={false}
             />
 
             <TouchableOpacity
                 style={[
                     styles.colorBox,
-                    { backgroundColor: selectedColor ? selectedColor.toLowerCase() : 'gray' }
+                    { backgroundColor: selectedColor ? selectedColor.toLowerCase() : '#ccc' }
                 ]}
                 onPress={openColorPicker}
             >
@@ -134,13 +105,15 @@ const SelectLeggo = () => {
                 </Text>
             </TouchableOpacity>
 
-            <Text style={styles.selectedColorText}>Selected Color: {selectedColor || 'None'}</Text>
+            <Text style={styles.selectedColorText}>
+                {selectedColor ? `Selected Color: ${selectedColor}` : 'No Color Selected'}
+            </Text>
 
             <View style={styles.pickerContainer}>
-       
                 <Picker
                     selectedValue={selectedCategory}
-                    onValueChange={(itemValue) =>selectCat(itemValue)}
+                    onValueChange={(itemValue) => selectCat(itemValue)}
+                    style={styles.picker}
                 >
                     <Picker.Item label="Select a category" value="" />
                     {filteredCategories.map(category => (
@@ -149,16 +122,22 @@ const SelectLeggo = () => {
                 </Picker>
             </View>
 
-            <Pressable
-                style={styles.searchButton}
-                onPress={searchParts}
-            >
-                <Text style={styles.searchButtonText}>
-                    {loading ? 'Loading...' : 'Search'}
-                </Text>
-            </Pressable>
+            <View style={styles.bottomContainer}>
+                <Pressable
+                    style={styles.searchButton}
+                    onPress={searchParts}
+                    disabled={loading}
+                >
+                    {loading ? (
+                        <ActivityIndicator size="small" color="#fff" />
+                    ) : (
+                        <Text style={styles.searchButtonText}>Search</Text>
+                    )}
+                </Pressable>
+            </View>
 
             <ColorPickerModal
+             
                 visible={colorModalVisible}
                 onClose={closeColorPicker}
                 onSelectColor={handleColorSelect}
